@@ -1,0 +1,23 @@
+.wrap {
+    cursor: pointer;
+    transition: all .3s;
+    width: 50px;
+    position: relative;
+}
+
+.wrap:hover {
+    transform: scale(1.4);
+}
+
+.count {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(39, 65, 149);
+    position: absolute;
+    top: -10px;
+    right: -1px;
+    z-index: 1;
+    color: #fff;
+    font-weight: 500;
+}

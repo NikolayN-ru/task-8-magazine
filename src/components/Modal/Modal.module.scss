@@ -1,0 +1,64 @@
+.wrap {
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  width: 80%;
+  min-height: 500px;
+  background-color: rgb(213, 213, 213);
+  border-radius: 20px;
+  padding: 10px;
+  color: rgb(101, 101, 101);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.countItem {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.close {
+  font-weight: 200;
+  color: red;
+  background-color: aliceblue;
+  border: none;
+  font-size: 20px;
+  height: 50px;
+  position: absolute;
+  top: -90px;
+  right: -30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.close:hover {
+  opacity: 0.7;
+}
+
+.right {
+  position: relative;
+  text-align: left;
+}
+
+.btnCount {
+  margin-top: 10px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.success {
+  background-color: rgb(30, 77, 128);
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.success:hover {
+  opacity: 0.7;
+}

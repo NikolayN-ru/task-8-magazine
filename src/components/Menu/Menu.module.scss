@@ -1,0 +1,93 @@
+.title {
+  color: rgb(30, 77, 128);
+  font-weight: 600;
+}
+
+.btnBlock {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.success {
+  background-color: rgb(30, 77, 128);
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.success:hover {
+  opacity: 0.7;
+}
+
+.reset {
+  border: none;
+  background-color: rgba(30, 77, 128, 0);
+  cursor: pointer;
+}
+.reset:hover {
+  opacity: 0.6;
+}
+
+.wrapInput {
+  position: relative;
+  // width: 250px;
+}
+
+input {
+  opacity: 0;
+  // opacity: 1;
+}
+
+label {
+  font-weight: 500;
+  color: rgb(30, 77, 128);
+  line-height: 1.7;
+}
+label:hover {
+  cursor: pointer;
+  color: rgb(168, 45, 139);
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after,
+input[type="radio"]:checked + label:after,
+input[type="radio"]:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
+  left: 3px;
+  top: 4px;
+  width: 10px;
+  height: 5px;
+  border-radius: 1px;
+  border-left: 4px solid #e145a3;
+  border-bottom: 4px solid #e145a3;
+  transform: rotate(-45deg);
+}
+
+input[type="radio"]:checked + label:after,
+input[type="radio"]:not(:checked) + label:after {
+  left: 5px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #e145a3;
+}
+
+input[type="checkbox"]:not(:checked) + label:after,
+input[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="radio"]:checked + label:after {
+  opacity: 1;
+}
