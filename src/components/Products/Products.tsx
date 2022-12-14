@@ -44,7 +44,6 @@ const Products = () => {
           {products &&
             products.map((item: any, index: number) => {
               if (index < pagination && index >= pagination - 6) {
-                console.log(index, "index", pagination);
                 return !brands[0]?.length ? (
                   <Item
                     key={index}

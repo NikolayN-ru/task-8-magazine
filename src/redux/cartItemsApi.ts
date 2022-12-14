@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
 
 export interface iCartItem {
   brand: number;
@@ -20,7 +19,10 @@ export const cartApi = createSlice({
     addItemCart: (state, { payload }) => {
       state.push(payload);
     },
-    delItemCart: (state) => {},
+    delItemCart: (state, { payload }) => {
+      const candidate = state.filter((item: any) => item.id !== payload);
+      return candidate;
+    },
     clearCart: (state) => {
       return initialState;
     },

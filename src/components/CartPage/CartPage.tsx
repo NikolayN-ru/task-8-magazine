@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -23,6 +24,11 @@ const CartPage = () => {
   }, [items]);
 
   const order = () => {
+    axios
+      .post("https://app.aaccent.su/js/confirm.php", { name, phone })
+      .then((res) => {
+        // res.data ! CORS
+      });
     setSubmit(true);
   };
   const submitFunc = () => {
@@ -36,11 +42,11 @@ const CartPage = () => {
         <div className={styles.left}>
           {items &&
             items.map((item: any, id: number) => {
-              return <ItemCart item={item} />;
+              return <ItemCart key={id} item={item} />;
             })}
         </div>
         <div className={styles.right}>
-          <p>total price: {state.toFixed(2)} USD</p>
+          <p className={styles.total}>total price: {state.toFixed(2)} USD</p>
           <div className={styles.cantact}>
             <input
               className={styles.input}
